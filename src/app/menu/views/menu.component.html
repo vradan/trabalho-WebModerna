@@ -6,17 +6,18 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Fiap</a>
+            <a class="navbar-brand" [routerLink]="['/']">{{titulo_empresa}}</a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="#">Home</a>
+                    <a [routerLink]="['/home']">{{titulo_home}}</a>
                 </li>
                 <li>
-                    <a href="#">Gerenciar Eventos</a>
+                    <a href="#">{{titulo_principal}}</a>
                 </li>
             </ul>
         </div>
     </div>
 </div>
+<router-outlet></router-outlet>

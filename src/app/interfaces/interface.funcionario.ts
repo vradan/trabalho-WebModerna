@@ -1,5 +1,7 @@
 export interface IFuncionario {
     nome: string;
-    dataContratacao: string;
+    cpf: string;
     cargo: string;
+    telefone: string;
+    email: string;
 }

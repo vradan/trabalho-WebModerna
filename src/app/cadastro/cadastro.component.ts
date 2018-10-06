@@ -7,12 +7,4 @@ import { FuncionariosService } from "../services/funcionarios.service";
     templateUrl: 'views/cadastro.component.html'
 })
 
-export class CadastroComponent {
-
-    public listaFuncionarios: IFuncionario[];
-
-    constructor(funcionariosService: FuncionariosService) {
-        this.listaFuncionarios = funcionariosService.getFuncionarios();
-    }
-
-}
+export class CadastroComponent { }

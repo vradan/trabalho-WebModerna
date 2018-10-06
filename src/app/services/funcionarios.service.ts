@@ -6,8 +6,20 @@ export class FuncionariosService {
 
     public getFuncionarios(): IFuncionario[] {
         return [
-            { nome: "Lucas de Souza Morinigo", dataContratacao: "03/10/2017", cargo: "Desenvolvedor" },
-            { nome: "Munir Abdu", dataContratacao: "02/02/2014", cargo: "Designer" }
+            {
+                nome: "Lucas de Souza Morinigo", 
+                cpf: "444.777.555-99", 
+                cargo: "Desenvolvedor",
+                telefone: "(11) 99999-9999",
+                email: "lucas.morinigo@email.com",
+            },
+            {
+                nome: "Marcos Vinicius", 
+                cpf: "555.444.333-22", 
+                cargo: "Desenvolvedor",
+                telefone: "(11) 99999-9999",
+                email: "marcos.vinicius@email.com",
+            }
         ];
     }
 

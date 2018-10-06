@@ -21,9 +21,10 @@ export class FuncionariosService {
         let json = JSON.stringify(
             {
                 nome: funcionario.nome,
+                cpf: funcionario.cpf,
+                cargo: funcionario.cargo,
+                telefone: funcionario.telefone,
                 email: funcionario.email,
-                idade: funcionario.idade,
-                dataContratacao: funcionario.dataContratacao
             });
         return this._http.post(this.url, json, options)
             .map(res => res.json());

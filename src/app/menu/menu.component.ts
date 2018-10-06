@@ -1,4 +1,6 @@
 import { Component } from "@angular/core";
+import { IFuncionario } from './../interfaces/interface.funcionario';
+import { FuncionariosService } from './../services/funcionarios.service';
 
 @Component({
     moduleId: module.id,
@@ -10,4 +12,6 @@ export class MenuComponent {
     titulo_empresa: string = "Fiap";
     titulo_home: string = "Home";
     titulo_principal: string = "Cadastro de Funcionário";
+    
+   
 }

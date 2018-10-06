@@ -1,0 +1,10 @@
+<h1>Teste Mongo</h1>
+
+<div class="container">
+<ul class="list_group">
+    <li *ngFor="let item of listaFuncionarios" (click)="selecionar(item)" class="list-group-item">
+        <strong>Nome: </strong>{{item.nome}} | <strong>Idade: </strong> {{item.idade}}
+        | <strong>E-mail: </strong> {{item.email}} | <strong>Data Contratação: </strong> {{item.dataContratacao}}
+    </li>
+</ul>
+</div>

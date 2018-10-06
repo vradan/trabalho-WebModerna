@@ -9,12 +9,14 @@ import { MenuComponent } from './menu/menu.component';
 
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './erro/notFound.component';
+import { CadastroComponent } from './cadastro/cadastro.component';
 
 @NgModule({
   imports: [BrowserModule, RouterModule.forRoot(appRoutes)],
   declarations: [AppComponent,
     MenuComponent,
     HomeComponent,
+    CadastroComponent,
     NotFoundComponent],
   bootstrap: [AppComponent]
 })

@@ -11,6 +11,8 @@ import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './erro/notFound.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 
+import { FuncionariosService } from './services/funcionarios.service';
+
 @NgModule({
   imports: [BrowserModule, RouterModule.forRoot(appRoutes)],
   declarations: [AppComponent,
@@ -18,6 +20,7 @@ import { CadastroComponent } from './cadastro/cadastro.component';
     HomeComponent,
     CadastroComponent,
     NotFoundComponent],
+  providers: [FuncionariosService],
   bootstrap: [AppComponent]
 })
 

@@ -14,6 +14,7 @@ import { NotFoundComponent } from './erro/notFound.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { MongoTesteComponent } from './mongoTeste/mongoTeste.component';
 import { FuncionariosService } from './services/funcionarios.service';
+import { FuncionarioComponent } from './funcionarios/funcionarios.component';
 
 @NgModule({
   imports: [BrowserModule, 
@@ -22,11 +23,13 @@ import { FuncionariosService } from './services/funcionarios.service';
   declarations: [AppComponent,
     MenuComponent,
     HomeComponent,
+    FuncionarioComponent,
     CadastroComponent,
     MongoTesteComponent,
     NotFoundComponent],
-
+    
     providers: [FuncionariosService],
+
   bootstrap: [AppComponent]
 })
 

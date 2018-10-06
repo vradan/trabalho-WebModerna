@@ -1,0 +1,44 @@
+<section id="lista-funcionarios">
+    <div class="jumbotron text-center">
+        <h1>Lista de Funcionários Cadastrados</h1>
+        <p class="text-center text-justify">
+            Abaixo estão todos os funcionários cadastrado no sistema.
+            <br/> É possível editar os dados do funcionário clicando em detalhes.
+        </p>
+    </div>
+    <div class="row justify-content-center container-fluid">
+        <div class="col-sm-8 text-center">
+            <form id="frm-filtro" class="form">
+                <div class="form-group row justify-content-center">
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="inputFiltro" placeholder="Use este campo para filtar por nome">
+                    </div>
+                </div>
+            </form>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Cargo</th>
+                        <th scope="col">Detalhes</th>
+                        <th scope="col">Remover</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let func of listaFuncionarios">
+                        <th scope="col">1</th>
+                        <td>{{func.nome}}</td>
+                        <td>{{func.cargo}}</td>
+                        <td>
+                            <img width="25px;" src="/images/icons/details.png">
+                        </td>
+                        <td>
+                            <img width="25px;" src="/images/icons/delete.png">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

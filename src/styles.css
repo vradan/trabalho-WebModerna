@@ -7,3 +7,12 @@ h1 {
 .margem {
   margin-top: 50px;
 }
+
+#lista-funcionarios .jumbotron{
+  color: #595959;
+  margin-bottom: 40px;
+}
+
+#lista-funcionarios #frm-filtro {
+  margin-bottom: 20px;
+}

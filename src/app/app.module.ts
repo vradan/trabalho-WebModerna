@@ -12,12 +12,14 @@ import { NotFoundComponent } from './erro/notFound.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 
 import { FuncionariosService } from './services/funcionarios.service';
+import { FuncionarioComponent } from './funcionarios/funcionarios.component';
 
 @NgModule({
   imports: [BrowserModule, RouterModule.forRoot(appRoutes)],
   declarations: [AppComponent,
     MenuComponent,
     HomeComponent,
+    FuncionarioComponent,
     CadastroComponent,
     NotFoundComponent],
   providers: [FuncionariosService],

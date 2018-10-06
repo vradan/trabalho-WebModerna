@@ -11,9 +11,25 @@ export class CadastroComponent {
 
     public funcionario: IFuncionario;
 
-    constructor(funcionariosService: FuncionariosService) {
+    constructor(private funcionariosService: FuncionariosService) {
         this.funcionario = funcionariosService.getFuncionarioCadastro();
-        console.log(this.funcionario);
+        if (this.funcionario == undefined) {
+            this.funcionario = {
+                _id: null,
+                nome: "",
+                cpf: "",
+                cargo: "",
+                telefone: 0,
+                email: ""
+            }
+        }
     }
 
- }
+    public incluir(funcionario: IFuncionario) {
+        this.funcionariosService.setFuncionarioWS(funcionario)
+            .subscribe(res => JSON.stringify(res),
+                error => alert(error),
+                () => console.log("Cadastrado com sucesso!"));
+    }
+
+}

@@ -10,15 +10,24 @@ import { FuncionariosService } from "../services/funcionarios.service";
 export class FuncionarioComponent {
 
     public listaFuncionarios: IFuncionario[];
-    private funcionariosService: FuncionariosService;
 
-    constructor(funcionariosService: FuncionariosService) {
-        this.funcionariosService = funcionariosService;
-        this.listaFuncionarios = funcionariosService.getFuncionarios();
+    constructor(private funcionariosService: FuncionariosService) {
+        this.listar();
+    }
+
+    public listar(): void {
+        this.funcionariosService.getFuncionarioWS()
+            .subscribe(res => this.listaFuncionarios = res,
+                error => alert(error),
+                () => console.log('finalizado'));
     }
 
     public selecionar(funcionario: IFuncionario): void {
         this.funcionariosService.setFuncionarioCadastro(funcionario);
+    }
+
+    public remover(funcionario: IFuncionario): void {
+        console.log(this.funcionariosService.removeFuncionarioWS(funcionario));
     }
 
 }

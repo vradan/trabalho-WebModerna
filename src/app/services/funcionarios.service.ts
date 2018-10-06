@@ -20,23 +20,42 @@ export class FuncionariosService {
         let options = new RequestOptions({ headers: header });
         let json = JSON.stringify(
             {
+                _id: funcionario._id,
                 nome: funcionario.nome,
                 cpf: funcionario.cpf,
                 cargo: funcionario.cargo,
                 telefone: funcionario.telefone,
                 email: funcionario.email,
             });
-        return this._http.post(this.url, json, options)
+        let result;
+
+        if (funcionario._id == null) {
+            result = this._http.put(this.url + "/" + funcionario._id, json, options)
+                .map(res => res.json());
+        } else {
+            result = this._http.post(this.url, json, options)
+                .map(res => res.json());
+        }
+
+
+        return result;
+    }
+
+    public removeFuncionarioWS(funcionario: IFuncionario): Observable<IFuncionario> {
+        let header = new Headers({ 'Content-Type': 'application/json' });
+        let options = new RequestOptions({ headers: header });
+
+        return this._http.delete(this.url + "/" + funcionario._id, options)
             .map(res => res.json());
     }
 
     public funcionarioCadastro: IFuncionario;
 
-    public setFuncionarioCadastro(funcionario : IFuncionario) : void {
+    public setFuncionarioCadastro(funcionario: IFuncionario): void {
         this.funcionarioCadastro = funcionario;
     }
 
-    public getFuncionarioCadastro() : IFuncionario {
+    public getFuncionarioCadastro(): IFuncionario {
         return this.funcionarioCadastro;
     }
 

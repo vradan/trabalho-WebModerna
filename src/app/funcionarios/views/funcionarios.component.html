@@ -13,6 +13,11 @@
                     <div class="col-sm-6">
                         <input type="text" class="form-control" id="inputFiltro" placeholder="Use este campo para filtar por nome">
                     </div>
+                    <div class="col-sm-6">
+                        <button type="button" class="btn btn-info" [routerLink]="['/cadastro']">
+                            <span class="glyphicon glyphicon-plus"></span>Novo Funcionário
+                        </button>
+                    </div>
                 </div>
             </form>
             <table class="table table-hover">
@@ -27,16 +32,18 @@
                 </thead>
                 <tbody>
                     <tr *ngFor="let func of listaFuncionarios">
-                        <th scope="col">1</th>
+                        <th scope="col">{{func._id}}</th>
                         <td>{{func.nome}}</td>
                         <td>{{func.cargo}}</td>
                         <td>
-                            <a [routerLink]="['/cadastro']">
+                            <a (click)="selecionar(func)" [routerLink]="['/cadastro']">
                                 <img width="25px;" src="/images/icons/details.png">
                             </a>
                         </td>
                         <td>
-                            <img width="25px;" src="/images/icons/delete.png">
+                            <a (click)="remover(func)" [routerLink]="['/funcionarios']">
+                                <img width="25px;" src="/images/icons/delete.png">
+                            </a>
                         </td>
                     </tr>
                 </tbody>

@@ -7,4 +7,13 @@ import { FuncionariosService } from "../services/funcionarios.service";
     templateUrl: 'views/cadastro.component.html'
 })
 
-export class CadastroComponent { }
+export class CadastroComponent {
+
+    public funcionario: IFuncionario;
+
+    constructor(funcionariosService: FuncionariosService) {
+        this.funcionario = funcionariosService.getFuncionarioCadastro();
+        console.log(this.funcionario);
+    }
+
+ }

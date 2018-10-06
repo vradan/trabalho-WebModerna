@@ -4,6 +4,16 @@ import { IFuncionario } from "../interfaces/interface.funcionario";
 @Injectable()
 export class FuncionariosService {
 
+    public funcionarioCadastro: IFuncionario;
+
+    public setFuncionarioCadastro(funcionario : IFuncionario) : void {
+        this.funcionarioCadastro = funcionario;
+    }
+
+    public getFuncionarioCadastro() : IFuncionario {
+        return this.funcionarioCadastro;
+    }
+
     public getFuncionarios(): IFuncionario[] {
         return [
             {

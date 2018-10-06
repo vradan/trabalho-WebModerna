@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { appRoutes } from './rotas/app.routes';
 
@@ -15,7 +16,7 @@ import { FuncionariosService } from './services/funcionarios.service';
 import { FuncionarioComponent } from './funcionarios/funcionarios.component';
 
 @NgModule({
-  imports: [BrowserModule, RouterModule.forRoot(appRoutes)],
+  imports: [BrowserModule, RouterModule.forRoot(appRoutes), FormsModule],
   declarations: [AppComponent,
     MenuComponent,
     HomeComponent,

@@ -31,7 +31,9 @@
                         <td>{{func.nome}}</td>
                         <td>{{func.cargo}}</td>
                         <td>
-                            <img width="25px;" src="/images/icons/details.png">
+                            <a [routerLink]="['/cadastro']">
+                                <img width="25px;" src="/images/icons/details.png">
+                            </a>
                         </td>
                         <td>
                             <img width="25px;" src="/images/icons/delete.png">
@@ -42,3 +44,4 @@
         </div>
     </div>
 </section>
+<router-outlet></router-outlet>

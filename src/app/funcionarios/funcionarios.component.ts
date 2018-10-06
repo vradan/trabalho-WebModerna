@@ -10,9 +10,15 @@ import { FuncionariosService } from "../services/funcionarios.service";
 export class FuncionarioComponent {
 
     public listaFuncionarios: IFuncionario[];
+    private funcionariosService: FuncionariosService;
 
     constructor(funcionariosService: FuncionariosService) {
+        this.funcionariosService = funcionariosService;
         this.listaFuncionarios = funcionariosService.getFuncionarios();
+    }
+
+    public selecionar(funcionario: IFuncionario): void {
+        this.funcionariosService.setFuncionarioCadastro(funcionario);
     }
 
 }

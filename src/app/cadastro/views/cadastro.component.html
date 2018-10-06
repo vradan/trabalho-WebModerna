@@ -1,5 +1,35 @@
 <div class="container margem">
-    <h1 >Cadastro de Funcionario</h1>
+    <h1>Cadastro de Funcionario</h1>
     <hr/>
-    
+
+    <form>
+        <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" class="form-control" id="nome" name="nome" placeholder="João/Maria" [(ngModel)]="funcionario.nome" >
+        </div>
+        <div class="form-group">
+            <label for="cpf">CPF:</label>
+            <input type="text" class="form-control" id="cpf" name="cpf" placeholder="999.999.999-99">
+        </div>
+        <div class="form-group">
+            <label for="cargo">Cargo:</label>
+            <input type="text" class="form-control" id="cargo" name="cargo" placeholder="Desenvolvedor de Sistemas">
+        </div>
+        <div class="form-group">
+            <label for="telefone">Telefone:</label>
+            <input type="text" class="form-control" id="telefone" name="telefone" placeholder="(99) 9999-9999">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="text" class="form-control" id="email" name="email" placeholder="endereco@email.com">
+        </div>
+        <div class="form-group">
+            <button type="button" class="btn btn-info">
+                <span class="glyphicon glyphicon-pencil"></span>
+                Incluir
+            </button>
+        </div>
+    </form>
+
 </div>
